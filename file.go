@@ -52,7 +52,7 @@ func createDirectory(path string) {
 func createFile(path string, filename string, fileText string) {
 
 	d := []byte(fileText)
-	err := ioutil.WriteFile(path+filename, d, 0644)
+	err := ioutil.WriteFile(path+filename+".swift", d, 0644)
 	if err != nil {
 		panic(err)
 	}
