@@ -5,7 +5,7 @@ import "fmt"
 const viewTemplate = `
 import UIKit
 
-class %sViewController: UIViewController {
+class %sViewController: UIViewController, %sViewProtocol  {
 
     
     var presenter: %sPresenterProtocol!
@@ -24,6 +24,6 @@ class %sViewController: UIViewController {
 `
 
 func createViewFile(path string, name string) {
-	viewString := fmt.Sprintf(viewTemplate, name, name, name, name)
+	viewString := fmt.Sprintf(viewTemplate, name, name, name, name, name)
 	createFile(path, fmt.Sprintf(`%sViewController`, name), viewString)
 }

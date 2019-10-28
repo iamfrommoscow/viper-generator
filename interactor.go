@@ -17,6 +17,6 @@ class %sInteractor: %sInteractorProtocol {
 `
 
 func createInteractorFile(path string, name string) {
-	interactorString := fmt.Sprintf(viewTemplate, name, name, name, name)
+	interactorString := fmt.Sprintf(interactorTemplate, name, name, name, name)
 	createFile(path, fmt.Sprintf(`%sInteractor`, name), interactorString)
 }
