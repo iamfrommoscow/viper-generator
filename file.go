@@ -1,13 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"io/ioutil"
 	"os"
 )
 
 func createDirectory(path string) {
-	fmt.Println(path)
 	if _, err := os.Stat(path); os.IsNotExist(err) {
 		err = os.MkdirAll(path, 0755)
 		if err != nil {
